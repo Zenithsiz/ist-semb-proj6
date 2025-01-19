@@ -164,39 +164,39 @@ As expected, we see a square wave, with a constant peak-to-peak amplitude of $3.
 
 = Discussion Questions
 
-= How the hardware PWM works?
+== How the hardware PWM works?
 
 Hardware PWM works by setting up a hardware timer that toggles the output of the GPIO pin when it's set off.
 
-= Why to do not implement in software?
+== Why to do not implement in software?
 
 Hardware timers can have much better precision than tracking the wave in software, and without needing to use up any CPU cycles.
 
-= How does the frequency change affect the PWM waveform?
+== How does the frequency change affect the PWM waveform?
 
 Changing the frequency changes the on and off time of the pwm wave by scaling them uniformly, in order to ensure the duty cycle stays the same.
 
-= What is the maximum resolution of the PWM signal, and how is it affected by the frequency setting?
+== What is the maximum resolution of the PWM signal, and how is it affected by the frequency setting?
 
 The typical maximum supported resolution of the PWM signal is 14 bits, but up to 20 bits if available on systems where `SOC_LEDC_TIMER_BIT_WIDTH > 14`.
 
-= How accurately does the ESP32 produce the desired duty cycles?
+== How accurately does the ESP32 produce the desired duty cycles?
 
 For the resolutions and duty cycles we tested, we saw near perfect accuracy, but we expect that as the resolution increases, the waves will be less and less accurate.
 
-= Why you need to configure the timer?
+== Why you need to configure the timer?
 
 Because the system uses a timer to toggle the pin to implement the PWM.
 
-= Which outputs can be configured as a PWM?
+== Which outputs can be configured as a PWM?
 
 On our system, according it's datasheet @datasheet (§3.11, Table 10), any GPIO pins may be used for LED PWM.
 
-= How many channels you have disponible in ESP32?
+== How many channels you have disponible in ESP32?
 
 According to the source code, by default there are 5 channels, but if `SOC_LEDC_CHANNEL_NUM > 6`, then up to 7 channels are defined.
 
-= How the difference between the LEDC mode and the MCPWM?
+== How the difference between the LEDC mode and the MCPWM?
 
 `MCPWM` mode is used for motor control, while `LEDC` is usually used to control LEDS.
 
