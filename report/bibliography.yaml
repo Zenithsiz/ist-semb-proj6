@@ -1,0 +1,16 @@
+---
+ledc-docs:
+  type: Web
+  title: ESP32 LED Control Documentation
+  author: Espressif Systems
+  url:
+    value: https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/peripherals/ledc.html
+    date: 2025-01-19
+
+datasheet:
+  type: Web
+  title: ESP32-C3 Datasheet
+  author: Espressif Systems
+  url:
+    value: https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-ESP32/esp32-c3_datasheet.pdf
+    date: 2025-01-19

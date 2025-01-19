@@ -1,0 +1,10 @@
+# ESP
+build/
+sdkconfig
+sdkconfig.old
+
+# Clangd
+.cache
+
+# Report
+*.pdf

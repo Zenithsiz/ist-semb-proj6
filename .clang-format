@@ -1,0 +1,12 @@
+---
+BasedOnStyle: LLVM
+IndentWidth: 4
+TabWidth: 4
+UseTab: AlignWithSpaces
+AllowShortBlocksOnASingleLine: Empty
+AllowShortFunctionsOnASingleLine: Empty
+ColumnLimit: 120
+SpaceBeforeRangeBasedForLoopColon: false
+AllowShortCaseLabelsOnASingleLine: true
+IndentCaseBlocks: false
+ReflowComments: false
